@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check</title>
+	<style type="text/css">
+		header section nav ul li{
+									display: inline-block;
+									margin:10px 20px;
+		}
+		header section nav{
+							text-align: right;
+							width:97vw;
+		}
+		header section nav ul li a{
+									text-decoration: none;
+									font-size:20px;
+									color:rgb(255,255,255);
+		}
+		header{
+				width:100vw;
+				background-color: black;
+		}
+		* {
+		  box-sizing: border-box;
+		}
+
+		a{
+			text-decoration: none;
+			font-size:20px;
+			color:rgb(255,255,255);
+			
+		}
+		h1{
+			text-align:center;
+			font-size:50px;
+			color:black;
+		}
+		form,button{
+			margin:20px auto;
+			width:500px;
+			color:black;
+		}
+		input,button{
+			padding:10px;
+			font-size: inherit;
+		}
+		input[type="text"]{
+			display:block;
+			margin-bottom:25px;
+			width:100%;
+			border:2px solid grey;
+		}
+		input[type="email"]{
+			display:block;
+			margin-bottom:25px;
+			width:100%;
+			border:2px solid grey;
+		}
+		input[type="number"]{
+			display:block;
+			margin-bottom:25px;
+			width:100%;
+			border:2px solid grey;
+		}
+		input[type="submit"]{
+			width:500px;
+			height:45px;
+			border:none;
+			background: green;
+			color:white;
+			margin-bottom: 25px;
+		}
+		.button {
+			  background:green; /* Green */
+			  border: none;
+			  color: white;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  border-radius: 4px;
+		  	  cursor: pointer;
+			}
+	</style>
+</head>
+<body>
+	<header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="/about">About</a></li>
+					<li><a href="/news">Latest News</a></li>
+					<li><a href="/check">Know your Hotspot</a></li>
+					<li><a href="/cases">Statewise Cases</a></li>
+					<li><a href="/map">Map</a></li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+	<h1>Details</h1>
+
+	  <form action="/check" method='POST'>
+	  		<input type="text" id="name" name="name" placeholder="Your name..">
+	  		<input type="email" id="mail" name="mail" placeholder="Your mail..">
+	  		<input type="number" id="num" name="num" placeholder="Your number..">
+	  		<input type="text" id="street" name="street" placeholder="Your Street..">
+	  		<input type="text" id="district" name="district" placeholder="Your District..">
+	  		<input type="text" id="state" name="state" placeholder="Your State..">
+	  		<input type="submit" value="Submit">
+	  		<button class="button"><a href="/safe">Check</a></button>
+	  </form>
+</body>
+</html>

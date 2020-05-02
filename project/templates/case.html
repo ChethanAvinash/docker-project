@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cases</title>
+	<style type="text/css">
+		header section nav ul li{
+									display: inline-block;
+									margin:10px 20px;
+		}
+		header section nav{
+							text-align: right;
+							width:97vw;
+		}
+		header section nav ul li a{
+									text-decoration: none;
+									font-size:20px;
+									color:rgb(255,255,255);
+		}
+		header{
+				width:100vw;
+				background-color: black;
+		}
+		table{
+			text-align: center;
+			margin:auto;
+		}
+		h1{
+			text-align:center;
+			font-size:50px;
+			color:black;
+		}
+		.box{
+			text-align: center;
+			margin:auto;
+		}
+		.box1{
+			background-color:red;
+			color:rgb(255,255,255);
+			font-size: 30px;
+			display: inline-block;
+			margin-right: 10px;
+			margin-bottom:20px;
+		}
+		.box2{
+			background-color:green;
+			color:rgb(255,255,255);
+			font-size: 30px;
+			display: inline-block;
+			margin-right: 10px;
+			margin-bottom:20px;
+
+		}
+		.box3{
+			background-color:darkred;
+			color:rgb(255,255,255);
+			font-size: 30px;
+			display: inline-block;
+			margin-bottom:20px;
+		}
+		table,tr,th{
+			border-collapse: collapse;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="/about">About</a></li>
+					<li><a href="/news">Latest News</a></li>
+					<li><a href="/check">Know your Hotspot</a></li>
+					<li><a href="/cases">Statewise Cases</a></li>
+					<li><a href="/map">Map</a></li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+		<h1>State Statistics</h1>
+		<div class="box">
+			<span class="box1">Total Cases: {{d[5]}}</span>
+			<span class="box2">Total Cured: {{d[6]}}</span>
+			<span class="box3">Total Deaths: {{d[7]}}</span>
+		</div>
+		<table border="1">
+			<tr>
+				<th>S.No.</th>
+				<th>Name of State/UT</th>
+				<th>Total Confirmed cases</th>
+				<th>Cured/Discharged</th>
+				<th>Death</th>
+			</tr>
+			{% for i in d[4] %}
+			<tr>
+				<th>{{i}}</th>
+				<th>{{d[0][i]}}</th>
+				<th>{{d[1][i]}}</th>
+				<th>{{d[3][i]}}</th>
+				<th>{{d[2][i]}}</th>
+			{% endfor %}
+			</tr>
+			
+		</table>
+	
+</body>
+</html>

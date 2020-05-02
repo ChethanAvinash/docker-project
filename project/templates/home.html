@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<style type="text/css">
+		header section nav ul li{
+									display: inline-block;
+									margin:10px 20px;
+		}
+		header section nav{
+							text-align: right;
+							width:97vw;
+		}
+		header section nav ul li a{
+									text-decoration: none;
+									font-size:20px;
+									color:rgb(255,255,255);
+		}
+		header{
+				width:100vw;
+				background-color: black;
+		}
+		.al{
+			text-align: center;
+		}
+		.box{
+			border-color: grey;
+			border-style: solid;
+			background-color: black;
+			color:rgb(255,255,255);
+		}	
+	</style>
+
+</head>
+<body>
+	<header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="/about">About</a></li>
+					<li><a href="/news">Latest News</a></li>
+					<li><a href="/check">Know your Hotspot</a></li>
+					<li><a href="/cases">Statewise Cases</a></li>
+					<li><a href="/map">Map</a></li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+
+ 	<div>
+	    <h1 style="color:black" class="al">Latest Updates</h1>
+	 
+
+	    {% for t,d,url in context %}
+	 	<div class="al">
+		    <div class="box">
+			    <h3><i><bold>News</bold></i>:</h3>
+			    <h4>{{t}}
+			    <h3><i><bold>Description:</bold></i></h3>
+			    <h4>{{d}}</h4>
+			</div>
+		    <!--<img src={{url}} width="50%"> -->
+		    <a href={{url}}><{{url}}</a>
+
+		</div>
+	    {% endfor %}
+ 	</div>
+ 
+</body>
+</html>

@@ -1,0 +1,10 @@
+flask
+locationiq
+geocoder
+folium
+newsapi
+pandas
+json
+os
+pandas
+beautifulsoup4

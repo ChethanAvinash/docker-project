@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<style type="text/css">
+		header section nav ul li{
+			display: inline-block;
+			margin:10px 20px;
+		}
+		header section nav{
+			text-align: right;
+			width:97vw;
+		}
+		header section nav ul li a{
+			text-decoration: none;
+			font-size:20px;
+			color:rgb(255,255,255);
+		}
+		header{
+			width:100vw;
+			background-color: black;
+		}
+		
+		.c{
+			color:rgb(0,255,0);
+		}
+		.r{
+			color:rgb(255,0,0);
+		}
+		.in{
+			width:85%;
+			margin:0px auto;
+			display:flex;
+	
+		}
+		.left-box{
+			width:45%;
+			text-align: justify;
+			font-weight: bold;
+		}
+		.right-box{
+			width:49%;
+			margin-left: 2%;
+		}
+		.s{
+			border-color: red;
+			border-style: solid;
+			color: rgb(255,0,0)
+		}
+		a{
+			text-decoration: none;
+			font-size:20px;
+			color:rgb(255,255,255);
+		}
+		.button {
+			  background-color: #4CAF50; /* Green */
+			  border: none;
+			  color: white;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  border-radius: 4px;
+		  	  cursor: pointer;
+		}	
+	</style>
+</head>
+<body>
+	<header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="/about">About</a></li>
+					<li><a href="/news">Latest News</a></li>
+					<li><a href="/check">Know your Hotspot</a></li>
+					<li><a href="/cases">Statewise Cases</a></li>
+					<li><a href="/map">Map</a></li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+	<main>
+		<div class="box">
+			{% if d[2] %}
+				<div class="in">
+					<div class="left-box">
+						<h1 class="r">Stay Alert</h1>
+						<br>
+						<h3>Your are very near to a hotspot</h3>
+						<br>
+						<h3><i><bold>Hotspot</bold></i>:  {{d[1]}}</h3>
+						<br>
+						<br>
+						<button class="button"><a href="/checkmap">See your Location</a></button>
+					</div>
+				
+					<div class="right-box">
+						<h2>Precautions</h2>
+						<br>
+						<p class="s">YOU HAVE TO BE VERY CAREFULL AND FOLLOW ALL THE PRECAUTIONS</p>
+						<ul>
+							<li>Don't go out unless it is unavoidable</li>
+							<br>
+							<li>Clean your hands often.</li> 
+							<br>
+							<li>Use soap and water, or an alcohol-based hand rub.</li>
+							<br>
+							<li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
+							<br>
+							<li>Don’t touch your eyes, nose or mouth.</li>
+							<br>
+							<li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
+							<br>
+							<li>Stay home if you feel unwell.</li>
+							<br>
+							<li>If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.</li>
+							<br>
+							<li>Follow the directions of your local health authority.</li>
+							<br>
+						</ul>
+					</div>
+				</div>
+				</div>
+			{% else %}
+				<div class="in">
+					<div class="left-box">
+						<h2 class="c">You are not in a hotspot</h2>
+						<br>
+						<h3>Nearest Hotspot: {{d[1]}} </h3>
+						<br>
+						<h3>Distance: {{d[0]}} km </h3>
+						<br>
+						<br>
+						<button class="button"><a href="/checkmap">See your location</a></button>
+					</div>
+					<div class="right-box">
+						<h2>Precautions</h2>
+						<br>
+						<ul>
+							<li>Clean your hands often.</li> 
+							<br>
+							<li>Use soap and water, or an alcohol-based hand rub.</li>
+							<br>
+							<li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
+							<br>
+							<li>Don’t touch your eyes, nose or mouth.</li>
+							<br>
+							<li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
+							<br>
+							<li>Stay home if you feel unwell.</li>
+							<br>
+							<li>If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.</li>
+							<br>
+							<li>Follow the directions of your local health authority.</li>
+							<br>
+						</ul>
+					</div>
+				</div>
+			{% endif %}
+			<br>
+			<br>
+			
+		</div>
+	</main>
+</body>
+</html>
